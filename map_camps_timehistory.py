@@ -59,7 +59,7 @@ def make_features():
     features = []
     df = pd.read_csv(locoutput)
     for i in range(df.shape[0]):
-        latlon, name, loctype, timeseries = extract_data(df, ts, startdate)
+        latlon, name, loctype, timeseries = extract_data(df, ts, startdate, i)
         feature = mgj.make_gj_points(latlon, name, 
                                      loctype, timeseries)
         features.extend(feature)
