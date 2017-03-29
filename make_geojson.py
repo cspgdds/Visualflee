@@ -17,10 +17,12 @@ def make_gj_points(latlon, name, timeseries):
 def write_geojson(filename, latlon, name, timeseries):
     features = make_gj_points(latlon, name, timeseries)
     with open(filename, 'w') as f:
+        f.write('jpcallback(')
         json.dump({
             'type': 'FeatureCollection',
             'features': features,
         }, f, indent=2)
+        f.write(')')
 
 if __name__ == '__main__':
     import pandas
