@@ -38,7 +38,7 @@ def read_csv(locoutput, outputfile, startdate):
         #changetime:-1, loctype = "conflict"
         loctype +=['conflict'] * int(ts.shape[0] - changetime)
        
-    pop = df['population'][i]
+    pop = 1000 #df['population'][i]
     index = pd.date_range(startdate, periods=ts.shape[0])
     try:
         timeseries = pd.Series(ts[name].values, index=index)
@@ -65,8 +65,3 @@ for i in range(df.shape[0]):
 
 #Write to file
 mgj.write_geojson_from_features('all_camps.json', features)
-
-
-
-
-
