@@ -21,7 +21,7 @@ The migration application uses data from two main sources:
 * UNHCR data about camps.
 * ACLED information about conflict location and times.
 
-As a result of this project an R package [runchr](https://github.com/AndySouth/runhcr) is being 
+As a result of this project an R package, [runchr](https://github.com/AndySouth/runhcr), is being 
 developed to extract data from the UN. It was thought to create a new separate repository for this
 as it was envisaged that such a framework might be of use to a more general audience than just for
 this project. 
