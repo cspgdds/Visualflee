@@ -133,7 +133,7 @@
           getInterval: getInterval,
           pointToLayer: function(data, latlng){
             return L.circleMarker(latlng, {
-              radius: (0.2 * (data.properties.population ** 0.5)),
+              radius: (0.2 * Math.sqrt(data.properties.population)),
               color: "#000",
               fillColor: status_colors[data.properties.loctype || 'city'],
               fillOpacity: 0.5,
