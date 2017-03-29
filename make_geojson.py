@@ -20,7 +20,8 @@ def write_geojson(filename, latlon, name, timeseries):
         json.dump({
             'type': 'FeatureCollection',
             'features': features,
-        }, f)
+        }, f, indent=2)
+
 if __name__ == '__main__':
     import pandas
     index = pandas.date_range('2015-3-1', periods=100)
