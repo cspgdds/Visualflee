@@ -47,6 +47,11 @@ popular [Leafletjs](http://leafletjs.com/) library to display maps, and the
 [Leaflet.timeline](http://skeate.github.io/Leaflet.timeline/) plugin to animate
 them.
 
+To show the visualisation:
+
+1. Run ``python map_camps_timehistory.py`` to process the data.
+2. Open flight.html in a browser.
+
 Extensions to this could include:
 - Adding a more explicit display of movement on the map, to show where the
   swelling population in a refugee camp is coming from.
