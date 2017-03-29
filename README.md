@@ -34,3 +34,21 @@ little bit more filtering.
 
 
 ## Visualisation
+
+We set out to visualise the movement of people during a conflict on a map,
+with circles which grow and shrink as the population in each location changes.
+The colours of the circles distinguish cities, conflict zones and refugee camps.
+
+Python code combines the CSV data describing geographical locations and how
+their population changed through time, and produces data in the standard GeoJSON
+format. The visualisation itself is created in HTML and Javascript, using the
+popular [Leafletjs](http://leafletjs.com/) library to display maps, and the
+[Leaflet.timeline](http://skeate.github.io/Leaflet.timeline/) plugin to animate
+them.
+
+Extensions to this could include:
+- Adding a more explicit display of movement on the map, to show where the
+  swelling population in a refugee camp is coming from.
+- Interactive controls for e.g. the scaling factor of the markers.
+- More automation, e.g. to automatically set the starting point of the map based
+  on the data.
