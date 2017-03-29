@@ -1,6 +1,5 @@
 import map_camps_timehistory as mct
 import pandas as pd
-
 import unittest
 
 class test_mct(unittest.TestCase):
@@ -31,6 +30,16 @@ class test_mct(unittest.TestCase):
             latlon, name, loctype, timeseries = mct.extract_data(self.df, self.ts, startdate, i)
             self.assertEqual(latlon[0], self.d['latitude'][i])
             self.assertEqual(latlon[1], self.d['lognitude'][i])
+
+    def test_loctype(self):
+        startdate = '2015-5-1'
+        for i in range(2):
+            latlon, name, loctype, timeseries = mct.extract_data(self.df, self.ts, startdate, i)
+            for t in range(self.df['time'][i]):
+                self.assertEqual(loctype[t], 'city')
+
+            for t in range(self.df['time'][i],len(loctype)):
+                self.assertEqual(loctype[t], 'conflict')
 
 if __name__ == '__main__':
     unittest.main()
