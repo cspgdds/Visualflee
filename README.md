@@ -49,7 +49,7 @@ them.
 
 To show the visualisation:
 
-1. Run ``python map_camps_timehistory.py`` to process the data.
+1. Run ``python map_camps_timehistory.py`` to process the data. This requires pandas.
 2. Open flight.html in a browser.
 
 Extensions to this could include:
@@ -58,3 +58,9 @@ Extensions to this could include:
 - Interactive controls for e.g. the scaling factor of the markers.
 - More automation, e.g. to automatically set the starting point of the map based
   on the data.
+
+## Testing
+
+To run the tests:
+
+    py.test
