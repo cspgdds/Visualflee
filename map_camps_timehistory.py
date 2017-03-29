@@ -21,32 +21,43 @@ def save_map(df):
                         fill_color='r').add_to(m)
     m.save("out.html")
 
+def read_csv(locoutput, outputfile, startdate):
 
+    #Load csv data into pandas dataframes
+    df = pd.read_csv(locoutput)
+    ts = pd.read_csv(outputfile)
 
+    name = df['name'][i]
+    latlon = [df['latitude'][i], df['lognitude'][i]]
+    changetime = df['time']
+    if changetime == NaN:
+        loctype = df['location_type'][i]
+    else:
+        loctype = 
+    pop = df['population'][i]
+    index = pd.date_range(startdate, periods=ts.shape[0])
+    try:
+        timeseries = pd.Series(ts[name].values, index=index)
+    except KeyError:
+        print("warning ", name, "missing from burundioutput" )
+        timeseries = pd.Series(pop, index=index)
 
-#Load csv data into pandas dataframes
-df = pd.read_csv('./blocations.csv')
-ts = pd.read_csv('./burundioutput.csv')
+    return latlon, name, loctype, timeseries
+
 
 #Get meta data for city
 startdate = '2015-3-1'
+locoutput = './blocations.csv'
+outputfile = './burundioutput.csv'
 features = []
+df = pd.read_csv(locoutput)
 for i in range(df.shape[0]):
-    name = df['name'][i]
-    latlon = [df['latitude'][i], df['lognitude'][i]]
-    loctype = df['location_type'][i]
-
-    #print(name, latlon,loctype)
-
-    try:
-        #Starting from the 1st May 2015, increments of one day
-        index = pd.date_range(startdate, periods=ts.shape[0])
-        timeseries = pd.Series(ts[name].values, index=index)
-
-        feature = mgj.make_gj_points(latlon, name, loctype, timeseries)
-        features.extend(feature)
-    except KeyError:
-        print("warning ", name, "missing from burundioutput" )
+    latlon, name, loctype, timeseries = read_csv(locoutput, 
+                                                 outputfile, 
+                                                 startdate)
+    feature = mgj.make_gj_points(latlon, name, 
+                                 loctype, timeseries)
+    features.extend(feature)
 
 #Write to file
 mgj.write_geojson_from_features('all_camps.json', features)

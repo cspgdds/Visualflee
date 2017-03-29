@@ -16,7 +16,7 @@ def make_gj_points(latlon, name, loctype, timeseries):
     } for (day, population) in timeseries.iteritems()
     ]
 
-def write_geojson_from_features(features):
+def write_geojson_from_features(filename, features):
     with open(filename, 'w') as f:
         json.dump({
             'type': 'FeatureCollection',
