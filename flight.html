@@ -71,21 +71,7 @@
         maxBounds: [[90,-180], [-90, 180]]
       });
 
-      // this is just used to show the currently-displayed earthquakes
-      // in the little sidebar. meant as an example of a use for the 'change'
-      // event
-      function updateList(timeline){
-        var displayed = timeline.getLayers();
-        var list = document.getElementById('displayed-list');
-        list.innerHTML = "";
-        displayed.forEach(function(quake){
-          var li = document.createElement('li');
-          li.innerHTML = quake.feature.properties.title;
-          list.appendChild(li);
-        });
-      }
-
-      // eqfeed_callback is called once the earthquake geojsonp file below loads
+      // jpcallback is called once the geojsonp file below loads
       function jpcallback(data){
         console.log('test');
         var getInterval = function(datapt) {
@@ -107,7 +93,7 @@
           getInterval: getInterval,
           pointToLayer: function(data, latlng){
             return L.circleMarker(latlng, {
-              radius: (1 * (data.properties.population ** 0.5)),
+              radius: (0.2 * (data.properties.population ** 0.5)),
               color: "#000",
               fillColor: status_colors[data.properties.loctype || 'city'],
               fillOpacity: 0.5,
@@ -123,6 +109,6 @@
         //updateList(timeline);
       }
     </script>
-    <script src="Bujumbura.json"></script>
+    <script src="all_camps.json"></script>
   </body>
 </html>
