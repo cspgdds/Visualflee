@@ -7,7 +7,7 @@ Flee, an agent model based simulation tool, developed by Groen (2016) at Brunel 
 Initially, this will be of benefit as a reasearch project but, if accurate, it could be of help for governmental and non-govermental organisations to manage refugees escaping conflict zones. The project can be divided into three major components:
 
 * data acquisition
-* refugee simulation
+* refugee movement simulation
 * visualisation of the results
 
 Currently these aspects are decoupled but the ultimate aim is to produce a tightly coupled applcation of the type that would allow the migration of refugees to be modelled in real time:
@@ -16,7 +16,6 @@ Currently these aspects are decoupled but the ultimate aim is to produce a tight
 
 ## Data acquisition
 
-<<<<<<< HEAD
 The migration application uses data from two main sources:
 
 * UNHCR data about camps.
@@ -29,8 +28,6 @@ this project.
 
 For the ACLED data the use of their [API](http://www.acleddata.com/wp-content/uploads/2017/03/API-User-Guide_March-2017.pdf) was investigated. A query was developed that returns the data required which could still do with a 
 little bit more filtering.
-
-## Migration modelling
 
 ## Simulation of refugee movements
    Acquired data from 3 different publicly available sources provide an input for running agent-based simulation. It uses FLEE code for predicting refugee movements and produces output numbers of population for cities and camps over simulation period. 
