@@ -28,20 +28,20 @@ def save_map(df):
 df = pd.read_csv('./blocations.csv')
 ts = pd.read_csv('./burundioutput.csv')
 
-
-#Get meta data for 1st city
+#Get meta data for city
+startdate = '2015-3-1'
 i = 0
 name = df['name'][i]
 filename = name + '.json'
 latlon = [df['latitude'][i], df['lognitude'][i]]
+loctype = df['location_type'][i]
 
 #Starting from the 1st May 2015, increments of one day
-index = pd.date_range('2015-3-1', periods=396)
-popn = ts[name].values
-timeseries = pd.Series(popn, index=index)
+index = pd.date_range(startdate, periods=ts.shape[0])
+timeseries = pd.Series(ts[name].values, index=index)
 
 #Write to file
-mgj.write_geojson(filename, latlon, name, timeseries)
+mgj.write_geojson(filename, latlon, name, loctype, timeseries)
 
 
 
