@@ -29,11 +29,15 @@ def read_csv(locoutput, outputfile, startdate):
 
     name = df['name'][i]
     latlon = [df['latitude'][i], df['lognitude'][i]]
-    changetime = df['time']
-    if changetime == NaN:
-        loctype = df['location_type'][i]
+    changetime = df['time'][i]
+    if pd.isnull(changetime):
+        loctype = [df['location_type'][i]]*ts.shape[0]
     else:
-        loctype = 
+        #0:changetime, loctype = "city"
+        loctype = ['city'] * (int(changetime))
+        #changetime:-1, loctype = "conflict"
+        loctype +=['conflict'] * int(ts.shape[0] - changetime)
+       
     pop = df['population'][i]
     index = pd.date_range(startdate, periods=ts.shape[0])
     try:
@@ -46,7 +50,7 @@ def read_csv(locoutput, outputfile, startdate):
 
 
 #Get meta data for city
-startdate = '2015-3-1'
+startdate = '2015-5-1'
 locoutput = './blocations.csv'
 outputfile = './burundioutput.csv'
 features = []

@@ -9,11 +9,11 @@ def make_gj_points(latlon, name, loctype, timeseries):
             'start': day.strftime('%Y-%m-%d'),
             'end': (day + timedelta(days=1)).strftime('%Y-%m-%d'),
             'name': name,
-            'loctype': loctype,
+            'loctype': lt,
             'population': int(population)
         },
         'geometry': {'type': 'Point', 'coordinates': lonlat}
-    } for (day, population) in timeseries.iteritems()
+    } for ((day, population), lt) in zip(timeseries.iteritems(), loctype)
     ]
 
 def write_geojson_from_features(filename, features):
