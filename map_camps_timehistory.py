@@ -27,7 +27,7 @@ def read_csv(locoutput, outputfile):
 
     return df,ts
 
-def extract_data(df, ts, startdate, defaultpop=1000):
+def extract_data(df, ts, startdate, i, defaultpop=1000):
 
     name = df['name'][i]
     latlon = [df['latitude'][i], df['lognitude'][i]]
@@ -50,19 +50,20 @@ def extract_data(df, ts, startdate, defaultpop=1000):
     return latlon, name, loctype, timeseries
 
 
-#Get meta data for city
-startdate = '2015-5-1'
-locoutput = './blocations.csv'
-outputfile = './burundioutput.csv'
-df, ts = read_csv(locoutput, outputfile)
+if __name__ == '__main__':
+    #Get meta data for city
+    startdate = '2015-5-1'
+    locoutput = './blocations.csv'
+    outputfile = './burundioutput.csv'
+    df, ts = read_csv(locoutput, outputfile)
 
-features = []
-df = pd.read_csv(locoutput)
-for i in range(df.shape[0]):
-    latlon, name, loctype, timeseries = extract_data(df, ts, startdate)
-    feature = mgj.make_gj_points(latlon, name, 
-                                 loctype, timeseries)
-    features.extend(feature)
+    features = []
+    df = pd.read_csv(locoutput)
+    for index in range(df.shape[0]):
+        latlon, name, loctype, timeseries = extract_data(df, ts, startdate, index)
+        feature = mgj.make_gj_points(latlon, name, 
+                                     loctype, timeseries)
+        features.extend(feature)
 
-#Write to file
-mgj.write_geojson_from_features('all_camps.json', features)
+    #Write to file
+    mgj.write_geojson_from_features('all_camps.json', features)
