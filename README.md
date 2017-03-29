@@ -30,7 +30,8 @@ For the ACLED data the use of their [API](http://www.acleddata.com/wp-content/up
 little bit more filtering.
 
 ## Simulation of refugee movements
-   Acquired data from 3 different publicly available sources provide an input for running agent-based simulation. It uses FLEE code for predicting refugee movements and produces output numbers of population for cities and camps over simulation period. 
+
+Acquired data from 3 different publicly available sources provide an input for running an agent-based simulation. It uses FLEE code for predicting refugee movements and produces output numbers of the population for cities and camps over the simulation period. An introductory paper on simulating refugee movements is written by Groen (2016)(http://www.sciencedirect.com/science/article/pii/S1877050916308766) with a description of parameters, assumptions and application to crisis situation of Mali. FLEE simulation model has also been applied to Burundi, Central African Republic and South Sudan, which is in a publication progress.
 
 
 ## Visualisation
