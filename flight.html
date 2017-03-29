@@ -39,14 +39,32 @@
         margin: 0;
         margin-bottom: 15px;
       }
+
+      .key-colour {
+        width: 20px;
+        height: 10px;
+        border: 1px solid black;
+        display: inline-block;
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body>
     <div id="info">
       <h1>Refugee movement</h1>
       <h2></h2>
-      <h3></h3>
-      <ul id="displayed-list"></ul>
+      <h3>Key</h3>
+      <ul>
+        <div>
+          <div class="key-colour" style="background-color: rgb(250, 246, 91)"></div>City
+        </div>
+        <div>
+          <div class="key-colour" style="background-color: rgb(246, 29, 49)"></div>Conflict zone
+        </div>
+        <div>
+          <div class="key-colour" style="background-color: #000"></div>Camp
+        </div>
+      </ul>
     </div>
     <div id="map"></div>
 
