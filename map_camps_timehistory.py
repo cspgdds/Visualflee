@@ -30,18 +30,26 @@ ts = pd.read_csv('./burundioutput.csv')
 
 #Get meta data for city
 startdate = '2015-3-1'
-i = 0
-name = df['name'][i]
-filename = name + '.json'
-latlon = [df['latitude'][i], df['lognitude'][i]]
-loctype = df['location_type'][i]
+features = []
+for i in range(df.shape[0]):
+    name = df['name'][i]
+    latlon = [df['latitude'][i], df['lognitude'][i]]
+    loctype = df['location_type'][i]
 
-#Starting from the 1st May 2015, increments of one day
-index = pd.date_range(startdate, periods=ts.shape[0])
-timeseries = pd.Series(ts[name].values, index=index)
+    #print(name, latlon,loctype)
+
+    try:
+        #Starting from the 1st May 2015, increments of one day
+        index = pd.date_range(startdate, periods=ts.shape[0])
+        timeseries = pd.Series(ts[name].values, index=index)
+
+        feature = mgj.make_gj_points(latlon, name, loctype, timeseries)
+        features.extend(feature)
+    except KeyError:
+        print("warning ", name, "missing from burundioutput" )
 
 #Write to file
-mgj.write_geojson(filename, latlon, name, loctype, timeseries)
+mgj.write_geojson_from_features('all_camps.json', features)
 
 
 
