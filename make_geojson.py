@@ -2,16 +2,17 @@ from datetime import timedelta, date
 import json
 
 def make_gj_points(latlon, name, loctype, timeseries):
+    lonlat = latlon[1], latlon[0]
     return  [{
         'type': 'Feature',
         'properties': {
-            'start': day.isoformat(),
-            'end': (day + timedelta(days=1)).isoformat(),
+            'start': day.strftime('%Y-%m-%d'),
+            'end': (day + timedelta(days=1)).strftime('%Y-%m-%d'),
             'name': name,
             'loctype': loctype,
             'population': int(population)
         },
-        'geometry': {'type': 'Point', 'coordinates': latlon}
+        'geometry': {'type': 'Point', 'coordinates': lonlat}
     } for (day, population) in timeseries.iteritems()
     ]
 
@@ -25,10 +26,12 @@ def write_geojson_from_features(features):
 def write_geojson(filename, latlon, name, loctype, timeseries):
     features = make_gj_points(latlon, name, loctype, timeseries)
     with open(filename, 'w') as f:
+        f.write('jpcallback(')
         json.dump({
             'type': 'FeatureCollection',
             'features': features,
         }, f, indent=2)
+        f.write(')')
 
 if __name__ == '__main__':
     import pandas
