@@ -49,8 +49,7 @@ def extract_data(df, ts, startdate, i, defaultpop=1000):
 
     return latlon, name, loctype, timeseries
 
-
-if __name__ == '__main__':
+def make_features():
     #Get meta data for city
     startdate = '2015-5-1'
     locoutput = './blocations.csv'
@@ -59,11 +58,14 @@ if __name__ == '__main__':
 
     features = []
     df = pd.read_csv(locoutput)
-    for index in range(df.shape[0]):
-        latlon, name, loctype, timeseries = extract_data(df, ts, startdate, index)
+    for i in range(df.shape[0]):
+        latlon, name, loctype, timeseries = extract_data(df, ts, startdate)
         feature = mgj.make_gj_points(latlon, name, 
                                      loctype, timeseries)
         features.extend(feature)
+    return features
 
+if __name__ == '__main__':
+    features = make_features()
     #Write to file
     mgj.write_geojson_from_features('all_camps.json', features)

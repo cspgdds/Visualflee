@@ -32,6 +32,5 @@ class test_mct(unittest.TestCase):
             self.assertEqual(latlon[0], self.d['latitude'][i])
             self.assertEqual(latlon[1], self.d['lognitude'][i])
 
-unittest.main()
-
-
+if __name__ == '__main__':
+    unittest.main()
