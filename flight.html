@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Leaflet.timeline</title>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="leaflet.timeline.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans); 
+      html, body{
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+      #info{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 20vw;
+        padding: 1em;
+      }
+      #map{
+        position: fixed;
+        top: 0;
+        left: 20vw;
+        bottom: 0;
+        right: 0;
+      }
+      .leaflet-bottom.leaflet-left{
+        width: 100%;
+      }
+      .leaflet-control-container .leaflet-timeline-controls{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">
+      <h1>Refugee movement</h1>
+      <h2></h2>
+      <h3></h3>
+      <ul id="displayed-list"></ul>
+    </div>
+    <div id="map"></div>
+
+    <script>
+      var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">' +
+        'OpenStreetMap</a> contributors';
+      var osm = L.tileLayer(osmUrl, {
+        maxZoom: 18,
+        attribution: osmAttrib,
+        noWrap: true
+      });
+      var map = L.map('map', {
+        layers: [osm],
+        center: new L.LatLng(52,0),
+        zoom: 7,
+        maxBounds: [[90,-180], [-90, 180]]
+      });
+
+      // this is just used to show the currently-displayed earthquakes
+      // in the little sidebar. meant as an example of a use for the 'change'
+      // event
+      function updateList(timeline){
+        var displayed = timeline.getLayers();
+        var list = document.getElementById('displayed-list');
+        list.innerHTML = "";
+        displayed.forEach(function(quake){
+          var li = document.createElement('li');
+          li.innerHTML = quake.feature.properties.title;
+          list.appendChild(li);
+        });
+      }
+
+      // eqfeed_callback is called once the earthquake geojsonp file below loads
+      function jpcallback(data){
+        console.log('test');
+        var getInterval = function(datapt) {
+          // earthquake data only has a time, so we'll use that as a "start"
+          // and the "end" will be that + some value based on magnitude
+          // 18000000 = 30 minutes, so a quake of magnitude 5 would show on the
+          // map for 150 minutes or 2.5 hours
+          return {
+            start: new Date(datapt.properties.start).getTime(),
+            end: new Date(datapt.properties.end).getTime()
+          };
+        };
+        var timelineControl = L.timelineSliderControl({
+          formatOutput: function(date) {
+            return new Date(date).toUTCString();
+          }
+        });
+        var timeline = L.timeline(data, {
+          getInterval: getInterval,
+          pointToLayer: function(data, latlng){
+            var hue = 60;
+            var radius = (100 * (data.properties.population ** 0.5));
+            console.log(radius)
+            return L.circleMarker(latlng, {
+              radius: (1 * (data.properties.population ** 0.5)),
+              color: "hsl("+hue+", 100%, 50%)",
+              fillColor: "hsl("+hue+", 100%, 50%)"
+            }).bindPopup(data.properties.name);
+          }
+        });
+        timelineControl.addTo(map);
+        timelineControl.addTimelines(timeline);
+        timeline.addTo(map);
+        // timeline.on('change', function(e){
+        //   updateList(e.target);
+        // });
+        updateList(timeline);
+      }
+    </script>
+    <script src="test.json"></script>
+  </body>
+</html>

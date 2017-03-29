@@ -2,15 +2,16 @@ from datetime import timedelta, date
 import json
 
 def make_gj_points(latlon, name, timeseries):
+    lonlat = latlon[1], latlon[0]
     return  [{
         'type': 'Feature',
         'properties': {
-            'start': day.isoformat(),
-            'end': (day + timedelta(days=1)).isoformat(),
+            'start': day.strftime('%Y-%m-%d'),
+            'end': (day + timedelta(days=1)).strftime('%Y-%m-%d'),
             'name': name,
             'population': int(population)
         },
-        'geometry': {'type': 'Point', 'coordinates': latlon}
+        'geometry': {'type': 'Point', 'coordinates': lonlat}
     } for (day, population) in timeseries.iteritems()
     ]
     

@@ -1,0 +1,1605 @@
+jpcallback({
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 0,
+        "end": "2015-03-02",
+        "start": "2015-03-01",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 500,
+        "end": "2015-03-03",
+        "start": "2015-03-02",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 1000,
+        "end": "2015-03-04",
+        "start": "2015-03-03",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 1500,
+        "end": "2015-03-05",
+        "start": "2015-03-04",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 2000,
+        "end": "2015-03-06",
+        "start": "2015-03-05",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 2500,
+        "end": "2015-03-07",
+        "start": "2015-03-06",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 3000,
+        "end": "2015-03-08",
+        "start": "2015-03-07",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 3500,
+        "end": "2015-03-09",
+        "start": "2015-03-08",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 4000,
+        "end": "2015-03-10",
+        "start": "2015-03-09",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 4500,
+        "end": "2015-03-11",
+        "start": "2015-03-10",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 5000,
+        "end": "2015-03-12",
+        "start": "2015-03-11",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 5500,
+        "end": "2015-03-13",
+        "start": "2015-03-12",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 6000,
+        "end": "2015-03-14",
+        "start": "2015-03-13",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 6500,
+        "end": "2015-03-15",
+        "start": "2015-03-14",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 7000,
+        "end": "2015-03-16",
+        "start": "2015-03-15",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 7500,
+        "end": "2015-03-17",
+        "start": "2015-03-16",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 8000,
+        "end": "2015-03-18",
+        "start": "2015-03-17",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 8500,
+        "end": "2015-03-19",
+        "start": "2015-03-18",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 9000,
+        "end": "2015-03-20",
+        "start": "2015-03-19",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 9500,
+        "end": "2015-03-21",
+        "start": "2015-03-20",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 10000,
+        "end": "2015-03-22",
+        "start": "2015-03-21",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 10500,
+        "end": "2015-03-23",
+        "start": "2015-03-22",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 11000,
+        "end": "2015-03-24",
+        "start": "2015-03-23",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 11500,
+        "end": "2015-03-25",
+        "start": "2015-03-24",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 12000,
+        "end": "2015-03-26",
+        "start": "2015-03-25",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 12500,
+        "end": "2015-03-27",
+        "start": "2015-03-26",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 13000,
+        "end": "2015-03-28",
+        "start": "2015-03-27",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 13500,
+        "end": "2015-03-29",
+        "start": "2015-03-28",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 14000,
+        "end": "2015-03-30",
+        "start": "2015-03-29",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 14500,
+        "end": "2015-03-31",
+        "start": "2015-03-30",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 15000,
+        "end": "2015-04-01",
+        "start": "2015-03-31",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 15500,
+        "end": "2015-04-02",
+        "start": "2015-04-01",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 16000,
+        "end": "2015-04-03",
+        "start": "2015-04-02",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 16500,
+        "end": "2015-04-04",
+        "start": "2015-04-03",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 17000,
+        "end": "2015-04-05",
+        "start": "2015-04-04",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 17500,
+        "end": "2015-04-06",
+        "start": "2015-04-05",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 18000,
+        "end": "2015-04-07",
+        "start": "2015-04-06",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 18500,
+        "end": "2015-04-08",
+        "start": "2015-04-07",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 19000,
+        "end": "2015-04-09",
+        "start": "2015-04-08",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 19500,
+        "end": "2015-04-10",
+        "start": "2015-04-09",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 20000,
+        "end": "2015-04-11",
+        "start": "2015-04-10",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 20500,
+        "end": "2015-04-12",
+        "start": "2015-04-11",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 21000,
+        "end": "2015-04-13",
+        "start": "2015-04-12",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 21500,
+        "end": "2015-04-14",
+        "start": "2015-04-13",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 22000,
+        "end": "2015-04-15",
+        "start": "2015-04-14",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 22500,
+        "end": "2015-04-16",
+        "start": "2015-04-15",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 23000,
+        "end": "2015-04-17",
+        "start": "2015-04-16",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 23500,
+        "end": "2015-04-18",
+        "start": "2015-04-17",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 24000,
+        "end": "2015-04-19",
+        "start": "2015-04-18",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 24500,
+        "end": "2015-04-20",
+        "start": "2015-04-19",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 25000,
+        "end": "2015-04-21",
+        "start": "2015-04-20",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 25500,
+        "end": "2015-04-22",
+        "start": "2015-04-21",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 26000,
+        "end": "2015-04-23",
+        "start": "2015-04-22",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 26500,
+        "end": "2015-04-24",
+        "start": "2015-04-23",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 27000,
+        "end": "2015-04-25",
+        "start": "2015-04-24",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 27500,
+        "end": "2015-04-26",
+        "start": "2015-04-25",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 28000,
+        "end": "2015-04-27",
+        "start": "2015-04-26",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 28500,
+        "end": "2015-04-28",
+        "start": "2015-04-27",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 29000,
+        "end": "2015-04-29",
+        "start": "2015-04-28",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 29500,
+        "end": "2015-04-30",
+        "start": "2015-04-29",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 30000,
+        "end": "2015-05-01",
+        "start": "2015-04-30",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 30500,
+        "end": "2015-05-02",
+        "start": "2015-05-01",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 31000,
+        "end": "2015-05-03",
+        "start": "2015-05-02",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 31500,
+        "end": "2015-05-04",
+        "start": "2015-05-03",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 32000,
+        "end": "2015-05-05",
+        "start": "2015-05-04",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 32500,
+        "end": "2015-05-06",
+        "start": "2015-05-05",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 33000,
+        "end": "2015-05-07",
+        "start": "2015-05-06",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 33500,
+        "end": "2015-05-08",
+        "start": "2015-05-07",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 34000,
+        "end": "2015-05-09",
+        "start": "2015-05-08",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 34500,
+        "end": "2015-05-10",
+        "start": "2015-05-09",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 35000,
+        "end": "2015-05-11",
+        "start": "2015-05-10",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 35500,
+        "end": "2015-05-12",
+        "start": "2015-05-11",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 36000,
+        "end": "2015-05-13",
+        "start": "2015-05-12",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 36500,
+        "end": "2015-05-14",
+        "start": "2015-05-13",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 37000,
+        "end": "2015-05-15",
+        "start": "2015-05-14",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 37500,
+        "end": "2015-05-16",
+        "start": "2015-05-15",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 38000,
+        "end": "2015-05-17",
+        "start": "2015-05-16",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 38500,
+        "end": "2015-05-18",
+        "start": "2015-05-17",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 39000,
+        "end": "2015-05-19",
+        "start": "2015-05-18",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 39500,
+        "end": "2015-05-20",
+        "start": "2015-05-19",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 40000,
+        "end": "2015-05-21",
+        "start": "2015-05-20",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 40500,
+        "end": "2015-05-22",
+        "start": "2015-05-21",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 41000,
+        "end": "2015-05-23",
+        "start": "2015-05-22",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 41500,
+        "end": "2015-05-24",
+        "start": "2015-05-23",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 42000,
+        "end": "2015-05-25",
+        "start": "2015-05-24",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 42500,
+        "end": "2015-05-26",
+        "start": "2015-05-25",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 43000,
+        "end": "2015-05-27",
+        "start": "2015-05-26",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 43500,
+        "end": "2015-05-28",
+        "start": "2015-05-27",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 44000,
+        "end": "2015-05-29",
+        "start": "2015-05-28",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 44500,
+        "end": "2015-05-30",
+        "start": "2015-05-29",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 45000,
+        "end": "2015-05-31",
+        "start": "2015-05-30",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 45500,
+        "end": "2015-06-01",
+        "start": "2015-05-31",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 46000,
+        "end": "2015-06-02",
+        "start": "2015-06-01",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 46500,
+        "end": "2015-06-03",
+        "start": "2015-06-02",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 47000,
+        "end": "2015-06-04",
+        "start": "2015-06-03",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 47500,
+        "end": "2015-06-05",
+        "start": "2015-06-04",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 48000,
+        "end": "2015-06-06",
+        "start": "2015-06-05",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 48500,
+        "end": "2015-06-07",
+        "start": "2015-06-06",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 49000,
+        "end": "2015-06-08",
+        "start": "2015-06-07",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0.0,
+          52.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "population": 49500,
+        "end": "2015-06-09",
+        "start": "2015-06-08",
+        "name": "Examplecamp"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+})
