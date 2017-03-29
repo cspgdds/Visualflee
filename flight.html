@@ -46,13 +46,22 @@
         border: 1px solid black;
         display: inline-block;
         margin-right: 10px;
+        vertical-align: middle;
+      }
+      .key-size {
+        display: inline-block;
+        margin-right: 10px;
+        border: 1px solid black;
+        vertical-align: middle;
+      }
+      .key-size-row {
+        padding: 5px;
       }
     </style>
   </head>
   <body>
     <div id="info">
       <h1>Refugee movement</h1>
-      <h2></h2>
       <h3>Key</h3>
       <ul>
         <div>
@@ -65,6 +74,19 @@
           <div class="key-colour" style="background-color: #000"></div>Camp
         </div>
       </ul>
+      <h3>Marker sizes</h3>
+        <div class="key-size-row">
+        <div class="key-size" style="width: 4px; height: 4px; border-radius: 2px;"></div>
+          100 people
+        </div>
+        <div class="key-size-row">
+        <div class="key-size" style="width: 13px; height: 13px; border-radius: 7px;"></div>
+          1000 people
+        </div>
+        <div class="key-size-row">
+        <div class="key-size" style="width: 40px; height: 40px; border-radius: 20px;"></div>
+          10000 people
+        </div>
     </div>
     <div id="map"></div>
 
@@ -84,7 +106,7 @@
       });
       var map = L.map('map', {
         layers: [osm],
-        center: new L.LatLng(-3.4, 29.4),
+        center: new L.LatLng(-3.0, 29.4),
         zoom: 8,
         maxBounds: [[90,-180], [-90, 180]]
       });

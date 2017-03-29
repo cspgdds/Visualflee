@@ -66,8 +66,3 @@ for i in range(df.shape[0]):
 
 #Write to file
 mgj.write_geojson_from_features('all_camps.json', features)
-
-
-
-
-
