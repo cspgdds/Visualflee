@@ -21,10 +21,6 @@ def write_geojson(filename, latlon, name, timeseries):
             'type': 'FeatureCollection',
             'features': features,
         }, f)
-
-def make_dates(number, start_day=date(2015, 3, 1)):
-    [start_day + timedelta(days=n) for n in range(number)]
-
 if __name__ == '__main__':
     import pandas
     index = pandas.date_range('2015-3-1', periods=100)
