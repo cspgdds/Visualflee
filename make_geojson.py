@@ -18,10 +18,12 @@ def make_gj_points(latlon, name, loctype, timeseries):
 
 def write_geojson_from_features(filename, features):
     with open(filename, 'w') as f:
+        f.write('jpcallback(')
         json.dump({
             'type': 'FeatureCollection',
             'features': features,
         }, f, indent=2)
+        f.write(')')
     
 def write_geojson(filename, latlon, name, loctype, timeseries):
     features = make_gj_points(latlon, name, loctype, timeseries)

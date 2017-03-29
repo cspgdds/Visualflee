@@ -39,14 +39,32 @@
         margin: 0;
         margin-bottom: 15px;
       }
+
+      .key-colour {
+        width: 20px;
+        height: 10px;
+        border: 1px solid black;
+        display: inline-block;
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body>
     <div id="info">
       <h1>Refugee movement</h1>
       <h2></h2>
-      <h3></h3>
-      <ul id="displayed-list"></ul>
+      <h3>Key</h3>
+      <ul>
+        <div>
+          <div class="key-colour" style="background-color: rgb(250, 246, 91)"></div>City
+        </div>
+        <div>
+          <div class="key-colour" style="background-color: rgb(246, 29, 49)"></div>Conflict zone
+        </div>
+        <div>
+          <div class="key-colour" style="background-color: #000"></div>Camp
+        </div>
+      </ul>
     </div>
     <div id="map"></div>
 
@@ -67,25 +85,11 @@
       var map = L.map('map', {
         layers: [osm],
         center: new L.LatLng(-3.4, 29.4),
-        zoom: 7,
+        zoom: 8,
         maxBounds: [[90,-180], [-90, 180]]
       });
 
-      // this is just used to show the currently-displayed earthquakes
-      // in the little sidebar. meant as an example of a use for the 'change'
-      // event
-      function updateList(timeline){
-        var displayed = timeline.getLayers();
-        var list = document.getElementById('displayed-list');
-        list.innerHTML = "";
-        displayed.forEach(function(quake){
-          var li = document.createElement('li');
-          li.innerHTML = quake.feature.properties.title;
-          list.appendChild(li);
-        });
-      }
-
-      // eqfeed_callback is called once the earthquake geojsonp file below loads
+      // jpcallback is called once the geojsonp file below loads
       function jpcallback(data){
         console.log('test');
         var getInterval = function(datapt) {
@@ -107,7 +111,7 @@
           getInterval: getInterval,
           pointToLayer: function(data, latlng){
             return L.circleMarker(latlng, {
-              radius: (1 * (data.properties.population ** 0.5)),
+              radius: (0.2 * (data.properties.population ** 0.5)),
               color: "#000",
               fillColor: status_colors[data.properties.loctype || 'city'],
               fillOpacity: 0.5,
@@ -123,6 +127,6 @@
         //updateList(timeline);
       }
     </script>
-    <script src="Bujumbura.json"></script>
+    <script src="all_camps.json"></script>
   </body>
 </html>
