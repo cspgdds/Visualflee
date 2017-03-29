@@ -51,6 +51,11 @@
     <div id="map"></div>
 
     <script>
+      var status_colors = {
+        'city': 'rgb(250, 246, 91)',
+        'conflict': 'rgb(246, 29, 49)',
+      }
+
       var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
       var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">' +
         'OpenStreetMap</a> contributors';
@@ -101,13 +106,10 @@
         var timeline = L.timeline(data, {
           getInterval: getInterval,
           pointToLayer: function(data, latlng){
-            var hue = 60;
-            var radius = (100 * (data.properties.population ** 0.5));
-            console.log(radius)
             return L.circleMarker(latlng, {
               radius: (1 * (data.properties.population ** 0.5)),
               color: "#000",
-              fillColor: "hsl("+hue+", 100%, 50%)",
+              fillColor: status_colors[data.properties.loctype || 'city'],
               fillOpacity: 0.5,
             }).bindPopup(data.properties.name);
           }
@@ -118,7 +120,7 @@
         // timeline.on('change', function(e){
         //   updateList(e.target);
         // });
-        updateList(timeline);
+        //updateList(timeline);
       }
     </script>
     <script src="Bujumbura.json"></script>

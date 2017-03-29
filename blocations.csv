@@ -1,31 +1,31 @@
-name,region,country,lognitude,latitude,location_type,population
-Bujumbura,Bujumbura,Burundi,29.3644,-3.3822,conflict,497166
-Bubanza,Bubanza Province,Burundi,29.391,-3.0804,city,83678
-Bukinanyana,Cibitoke Province,Burundi,29.3361,-2.8807,conflict,75750
-Cibitoke,Cibitoke Province,Burundi,29.1248,-2.8869,conflict,"50,899"
-Muramvya,Muramvya Province,Burundi,29.6079,-3.268,city,"81,257"
-Kayanza,Kayanza Province,Burundi,29.6293,-2.9221,city,"97,252"
-Kabarore,Kayanza Province,Burundi,29.5374,-2.8505,conflict,62303
-Mwaro,Mwaro Province,Burundi,29.7034,-3.5272,conflict,273143
-Rumonge,Rumonge Province,Burundi,29.4386,-3.9736,city,"145,074"
-Burambi,Rumonge Province,Burundi,29.54262,-3.81985,conflict,57167
-Bururi,Bururi Province,Burundi,29.62438,-3.94877,city,"83,614"
-Rutana,Rutana Province,Burundi,29.992,-3.9279,city,"55,177"
-Makamba,Makamba Province,Burundi,29.804,-4.1348,city,"93,558"
-Gitega,Gitega Province,Burundi,29.9308,-3.4264,city,"155,005"
-Makebuko,Gitega Province,Burundi,29.9977,-3.6026,city,"59,456"
-Karuzi,Karuzi Province,Burundi,30.17351,-3.10608,city,"436,443"
-Ruyigi,Ruyigi Province,Burundi,30.24861,-3.47639,city,"56,631"
-Gisuru,Ruyigi Province,Burundi,30.48706055,-3.43665816,conflict,99461
-Cankuzo,Cankuzo Province,Burundi,30.5528,-3.2186,city,"47,972"
-Muyinga,Muyinga Province,Burundi,30.3414,-2.8451,city,"138,227"
-Gashoho,Muyinga Province,Burundi,30.1335,-2.8017,city,"66,107"
-Kirundo,Kirundo Province,Burundi,30.0959,-2.5845,city,"93,110"
-Ngozi,Ngozi Province,Burundi,29.8306,-2.9075,city,"120,557"
-Commune of Mabanda,Makamba Province,Burundi,29.775598,-4.276275,city,"45,836"
-Mahama,Eastern Province,Rwanda,30.8052,-2.274,camp,0
-Nduta,Kigoma province,Tanzania,30.709625,-3.751877,camp,0
-Nyarugusu,Kigoma province,Tanzania,30.122654,-4.637036,camp,0
-Kagunga,Kigoma province,Tanzania,29.653993,-4.481706,forwarding_hub,0
-Nakivale,Isingiro district South,Uganda,30.71228027,-0.67427032,camp,0
-Lusenda,South-Kivu,Democratic Republic of Congo,29.096308,-3.919793,camp,0
+name,region,country,lognitude,latitude,location_type,time,population
+Bujumbura,Bujumbura,Burundi,29.3644,-3.3822,conflict,0,497166
+Bubanza,Bubanza Province,Burundi,29.391,-3.0804,city,,83678
+Bukinanyana,Cibitoke Province,Burundi,29.3361,-2.8807,conflict,71,75750
+Cibitoke,Cibitoke Province,Burundi,29.1248,-2.8869,conflict,75,"50,899"
+Muramvya,Muramvya Province,Burundi,29.6079,-3.268,city,,"81,257"
+Kayanza,Kayanza Province,Burundi,29.6293,-2.9221,city,,"97,252"
+Kabarore,Kayanza Province,Burundi,29.5374,-2.8505,conflict,70,62303
+Mwaro,Mwaro Province,Burundi,29.7034,-3.5272,conflict,178,273143
+Rumonge,Rumonge Province,Burundi,29.4386,-3.9736,city,,"145,074"
+Burambi,Rumonge Province,Burundi,29.54262,-3.81985,conflict,222,57167
+Bururi,Bururi Province,Burundi,29.62438,-3.94877,city,,"83,614"
+Rutana,Rutana Province,Burundi,29.992,-3.9279,city,,"55,177"
+Makamba,Makamba Province,Burundi,29.804,-4.1348,city,,"93,558"
+Gitega,Gitega Province,Burundi,29.9308,-3.4264,city,,"155,005"
+Makebuko,Gitega Province,Burundi,29.9977,-3.6026,city,,"59,456"
+Karuzi,Karuzi Province,Burundi,30.17351,-3.10608,city,,"436,443"
+Ruyigi,Ruyigi Province,Burundi,30.24861,-3.47639,city,,"56,631"
+Gisuru,Ruyigi Province,Burundi,30.48706055,-3.43665816,conflict,206,99461
+Cankuzo,Cankuzo Province,Burundi,30.5528,-3.2186,city,,"47,972"
+Muyinga,Muyinga Province,Burundi,30.3414,-2.8451,city,,"138,227"
+Gashoho,Muyinga Province,Burundi,30.1335,-2.8017,city,,"66,107"
+Kirundo,Kirundo Province,Burundi,30.0959,-2.5845,city,,"93,110"
+Ngozi,Ngozi Province,Burundi,29.8306,-2.9075,city,,"120,557"
+Commune of Mabanda,Makamba Province,Burundi,29.775598,-4.276275,city,,"45,836"
+Mahama,Eastern Province,Rwanda,30.8052,-2.274,camp,,0
+Nduta,Kigoma province,Tanzania,30.709625,-3.751877,camp,,0
+Nyarugusu,Kigoma province,Tanzania,30.122654,-4.637036,camp,,0
+Kagunga,Kigoma province,Tanzania,29.653993,-4.481706,forwarding_hub,,0
+Nakivale,Isingiro district South,Uganda,30.71228027,-0.67427032,camp,,0
+Lusenda,South-Kivu,Democratic Republic of Congo,29.096308,-3.919793,camp,,0
