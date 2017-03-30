@@ -1,4 +1,4 @@
-name,region,country,lognitude,latitude,location_type,time,population
+name,region,country,longitude,latitude,location_type,time,population
 Bujumbura,Bujumbura,Burundi,29.3644,-3.3822,conflict,0,497166
 Bubanza,Bubanza Province,Burundi,29.391,-3.0804,city,,83678
 Bukinanyana,Cibitoke Province,Burundi,29.3361,-2.8807,conflict,71,75750
