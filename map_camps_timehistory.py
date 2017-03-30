@@ -3,6 +3,9 @@ import pandas as pd
 import make_geojson as mgj
 
 def save_map(df):
+    """Not currently used - this was an experiment in a making the map a
+    different way, using the 'folium' Python library (which wraps leafletjs)
+    """
     import folium
     minlong = df['lognitude'].min()
     maxlong = df['lognitude'].max()
@@ -31,6 +34,9 @@ def extract_data(df, ts, startdate, i, defaultpop=1000):
 
     name = df['name'][i]
     latlon = [df['latitude'][i], df['lognitude'][i]]
+    
+    # Locations with a changetime have type *city* before that day, and
+    # *conflict* after it.
     changetime = df['time'][i]
     if pd.isnull(changetime):
         loctype = [df['location_type'][i]]*ts.shape[0]
@@ -44,24 +50,23 @@ def extract_data(df, ts, startdate, i, defaultpop=1000):
     try:
         timeseries = pd.Series(ts[name].values, index=index)
     except KeyError:
-        print("warning ", name, "missing from burundioutput" )
+        print("Warning:", name, "missing from burundioutput" )
         timeseries = pd.Series(defaultpop, index=index)
 
     return latlon, name, loctype, timeseries
 
-def make_features():
-    #Get meta data for city
-    startdate = '2015-5-1'
-    locoutput = './blocations.csv'
-    outputfile = './burundioutput.csv'
-    df, ts = read_csv(locoutput, outputfile)
+def make_features(locations_file='blocations.csv',
+                  timeseries_file='burundioutput.csv',
+                  startdate='2015-05-01'):
+    locations = pd.read_csv(locations_file)
+    timeseries = pd.read_csv(timeseries_file)
 
     features = []
-    df = pd.read_csv(locoutput)
-    for i in range(df.shape[0]):
-        latlon, name, loctype, timeseries = extract_data(df, ts, startdate, i)
+    for i in range(locations.shape[0]):
+        latlon, name, loctype, population = extract_data(locations, timeseries,
+                                                         startdate, i)
         feature = mgj.make_gj_points(latlon, name, 
-                                     loctype, timeseries)
+                                     loctype, population)
         features.extend(feature)
     return features
 

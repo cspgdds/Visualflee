@@ -96,6 +96,8 @@
         'conflict': 'rgb(246, 29, 49)',
       }
 
+      // Set up the Leaflet js map, with map tiles from OpenStreetMap.
+      // L is the Leaflet API object
       var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
       var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">' +
         'OpenStreetMap</a> contributors';
@@ -113,12 +115,12 @@
 
       // jpcallback is called once the geojsonp file below loads
       function jpcallback(data){
-        console.log('test');
+        // The following code sets up the timeline and the points that respond
+        // to it. The points don't really change size - we have a separate
+        // point for each day at each location, and as the timeline runs, it
+        // shows the points for one day, then hides them as it shows the next
+        // day.
         var getInterval = function(datapt) {
-          // earthquake data only has a time, so we'll use that as a "start"
-          // and the "end" will be that + some value based on magnitude
-          // 18000000 = 30 minutes, so a quake of magnitude 5 would show on the
-          // map for 150 minutes or 2.5 hours
           return {
             start: new Date(datapt.properties.start).getTime(),
             end: new Date(datapt.properties.end).getTime()
@@ -143,12 +145,9 @@
         timelineControl.addTo(map);
         timelineControl.addTimelines(timeline);
         timeline.addTo(map);
-        // timeline.on('change', function(e){
-        //   updateList(e.target);
-        // });
-        //updateList(timeline);
       }
     </script>
+    <!-- This loads the data to make the visualisation -->
     <script src="all_camps.json"></script>
   </body>
 </html>
