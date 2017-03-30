@@ -1,19 +1,25 @@
 from datetime import timedelta, date
 import json
 
-def make_gj_points(latlon, name, loctype, timeseries):
-    lonlat = latlon[1], latlon[0]
+def make_gj_points(latlon, name, timeseries):
+    """Make geojson Point features for a single location.
+    
+    latlon: 2-tuple, e.g. (-3.3822, 29.3644)
+    name: string
+    timeseries: Data frame, rows representing days, with columns loctype & population
+    """
+    lonlat = latlon[1], latlon[0] # GeoJSON puts longitude first
     return  [{
         'type': 'Feature',
         'properties': {
             'start': day.strftime('%Y-%m-%d'),
             'end': (day + timedelta(days=1)).strftime('%Y-%m-%d'),
             'name': name,
-            'loctype': lt,
-            'population': int(population)
+            'loctype': row['loctype'],
+            'population': int(row['population'])
         },
         'geometry': {'type': 'Point', 'coordinates': lonlat}
-    } for ((day, population), lt) in zip(timeseries.iteritems(), loctype)
+    } for (day, row) in timeseries.iterrows()
     ]
 
 def write_geojson_from_features(filename, features):

@@ -3,10 +3,11 @@ import make_geojson
 
 def test_make_gj_points():
     index = pandas.date_range('2015-3-1', periods=100)
-    popn = [n * 500 for n in range(100)]
-    ser = pandas.Series(popn, index=index)
-    loctype = (['city'] * 50) + (['conflict'] * 50)
-    res = make_geojson.make_gj_points((52.0, 0.0), 'Examplecamp', loctype, ser)
+    popn = pandas.Series([n * 500 for n in range(100)], index=index)
+    loctype = pandas.Series((['city'] * 50) + (['conflict'] * 50), index=index)
+    timeseries = pandas.DataFrame({'loctype': loctype, 'population': popn})
+    
+    res = make_geojson.make_gj_points((52.0, 0.0), 'Examplecamp', timeseries)
     
     assert len(res) == 100
     assert res[0]['type'] == 'Feature'

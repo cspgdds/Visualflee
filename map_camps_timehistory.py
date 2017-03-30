@@ -22,51 +22,56 @@ def save_map(df):
                         fill_color='r').add_to(m)
     m.save("out.html")
 
-def read_csv(locoutput, outputfile):
 
-    #Load csv data into pandas dataframes
-    df = pd.read_csv(locoutput)
-    ts = pd.read_csv(outputfile)
-
-    return df,ts
-
-def extract_data(df, ts, startdate, i, defaultpop=1000):
-
-    name = df['name'][i]
-    latlon = [df['latitude'][i], df['lognitude'][i]]
+def get_loctype(location, date_index):
+    """Returns a pandas Series of the location type for each day.
     
-    # Locations with a changetime have type *city* before that day, and
-    # *conflict* after it.
-    changetime = df['time'][i]
+    Locations with a changetime have type *city* before that day, and *conflict*
+    after it.
+    """
+    n_days = len(date_index)
+    changetime = location.time
     if pd.isnull(changetime):
-        loctype = [df['location_type'][i]]*ts.shape[0]
+        loctype = location.location_type
     else:
         #0:changetime, loctype = "city"
-        loctype = ['city'] * (int(changetime))
+        loctype = ['city'] * int(changetime)
         #changetime:-1, loctype = "conflict"
-        loctype +=['conflict'] * int(ts.shape[0] - changetime)
-       
-    index = pd.date_range(startdate, periods=ts.shape[0])
-    try:
-        timeseries = pd.Series(ts[name].values, index=index)
-    except KeyError:
-        print("Warning:", name, "missing from burundioutput" )
-        timeseries = pd.Series(defaultpop, index=index)
+        loctype +=['conflict'] * int(n_days - changetime)
+    return pd.Series(loctype, index=date_index)
 
-    return latlon, name, loctype, timeseries
+
+def get_population(timeseries_data, name, defaultpop=1000):
+    """Get the population time series for the named location.
+    
+    If the name is not in the data provided, construct a time series with a
+    constant default population, so that the marker shows up on the map.
+    """
+    try:
+        return timeseries_data[name]
+    except KeyError:
+        print("Warning:", name, "missing from time series data")
+        return pd.Series(defaultpop, index=timeseries_data.index)
+
 
 def make_features(locations_file='blocations.csv',
                   timeseries_file='burundioutput.csv',
                   startdate='2015-05-01'):
     locations = pd.read_csv(locations_file)
     timeseries = pd.read_csv(timeseries_file)
+    n_days = timeseries.shape[0]
+    # Construct an index with real dates rather than day numbers
+    timeseries.index = pd.date_range(startdate, periods=n_days)
 
     features = []
-    for i in range(locations.shape[0]):
-        latlon, name, loctype, population = extract_data(locations, timeseries,
-                                                         startdate, i)
-        feature = mgj.make_gj_points(latlon, name, 
-                                     loctype, population)
+    for location in locations.itertuples(name='Location'):
+        latlon = (location.latitude, location.longitude)
+        loctype_by_day = get_loctype(location, timeseries.index)
+        population_by_day = get_population(timeseries, location.name)
+        
+        data_for_location = pd.DataFrame({'loctype': loctype_by_day,
+                                          'population': population_by_day})
+        feature = mgj.make_gj_points(latlon, location.name, data_for_location)
         features.extend(feature)
     return features
 
