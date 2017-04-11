@@ -77,5 +77,5 @@ def make_features(locations_file='blocations.csv',
 
 if __name__ == '__main__':
     features = make_features()
-    #Write to file
-    mgj.write_geojson_from_features('all_camps.json', features)
+    # Write to file
+    mgj.write_geojson_from_features('all_camps.jsonp', features)

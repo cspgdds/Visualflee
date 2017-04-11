@@ -22,6 +22,10 @@ def make_gj_points(latlon, name, timeseries):
     } for (day, row) in timeseries.iterrows()
     ]
 
+# This format is called JSONP; it consists of a normal blob of JSON wrapped in
+# a Javascript function call (we're calling the function jpcallback for jsonp
+# callback, which is a pretty bad name). This is a bit more convenient to load
+# from Javascript than normal JSON (without the function call).
 def write_geojson_from_features(filename, features):
     with open(filename, 'w') as f:
         f.write('jpcallback(')
