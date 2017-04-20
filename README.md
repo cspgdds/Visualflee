@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cspgdds/Visualflee.svg?branch=master)](https://travis-ci.org/cspgdds/Visualflee)
 
-This project is an inspiration of the Hackday at the Collaborators Workshop 2017 organised by SSI. 
+This project is an inspiration of the Hackday at the Collaborations Workshop 2017 organised by SSI. 
 
 ## Overview
 
