@@ -61,17 +61,20 @@
   </head>
   <body>
     <div id="info">
-      <h1>Refugee movement</h1>
+      <h1>Predicting forced displacement movements</h1>
       <h3>Key</h3>
       <ul>
         <div>
-          <div class="key-colour" style="background-color: rgb(250, 246, 91)"></div>City
+          <div class="key-colour" style="background-color: rgb(250, 246, 91)"></div>Interconnecting town
         </div>
         <div>
-          <div class="key-colour" style="background-color: rgb(246, 29, 49)"></div>Conflict zone
+          <div class="key-colour" style="background-color: rgb(246, 29, 49)"></div>Conflict Zone
         </div>
         <div>
-          <div class="key-colour" style="background-color: #000"></div>Camp
+          <div class="key-colour" style="background-color: rgb(8, 94, 29)"></div>Camp
+        </div>
+        <div>
+          <div class="key-colour" style="background-color: rgb(2, 250, 47)"></div>Forwarding Hub
         </div>
       </ul>
       <h3>Marker sizes</h3>
@@ -94,7 +97,8 @@
       var status_colors = {
         'city': 'rgb(250, 246, 91)',
         'conflict': 'rgb(246, 29, 49)',
-        'camp': 'rgb(5, 128, 34)',
+        'camp': 'rgb(8, 94, 29)',
+        'forwarding_hub': 'rgb(2, 250, 47)',
       }
 
       // Set up the Leaflet js map, with map tiles from OpenStreetMap.
