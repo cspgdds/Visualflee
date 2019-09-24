@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Visualflee - refugee movement</title>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="leaflet.timeline.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans); 
+      html, body{
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+      #info{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 20vw;
+        padding: 1em;
+      }
+      #map{
+        position: fixed;
+        top: 0;
+        left: 20vw;
+        bottom: 0;
+        right: 0;
+      }
+      .leaflet-bottom.leaflet-left{
+        width: 100%;
+      }
+      .leaflet-control-container .leaflet-timeline-controls{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+
+      .key-colour {
+        width: 20px;
+        height: 10px;
+        border: 1px solid black;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+      .key-size {
+        display: inline-block;
+        margin-right: 10px;
+        border: 1px solid black;
+        vertical-align: middle;
+      }
+      .key-size-row {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">
+      <h1>Predicting forced displacement movements</h1>
+      <h3>Location types:</h3>
+        <div>
+        <div class="key-colour" style="background-color: rgb(201, 0, 19)"></div>Conflict Zone
+        </div>
+        <div>
+        <div class="key-colour" style="background-color: rgb(8, 94, 29)"></div>Camp
+        </div>
+        <div>
+        <div class="key-colour" style="background-color: rgb(250, 246, 91)"></div>Interconnecting Town
+        </div>
+        <div>
+        <div class="key-colour" style="background-color: rgb(2, 250, 47)"></div>Forwarding Hub
+        </div>
+      <h3>Population size:</h3>
+        <div class="key-size-row">
+        <div class="key-size" style="width: 7px; height: 7px; border-radius: 4px;"></div>
+          100 people
+        </div>
+        <div class="key-size-row">
+        <div class="key-size" style="width: 15px; height: 15px; border-radius: 8px;"></div>
+          1000 people
+        </div>
+        <div class="key-size-row">
+        <div class="key-size" style="width: 30px; height: 30px; border-radius: 15px;"></div>
+          10000 people
+        </div>
+	<div class="key-size-row">
+	<div class="key-size" style="width: 45px; height: 45px; border-radius: 22px;"></div>
+	  100000 people
+	</div>
+    </div>
+    <div id="map"></div>
+
+    <script>
+      var status_colors = {
+        'town': 'rgb(250, 246, 91)',
+        'conflict': 'rgb(201, 0, 19)',
+        'camp': 'rgb(8, 94, 29)',
+        'forwarding_hub': 'rgb(2, 250, 47)',
+      }
+
+      // Set up the Leaflet js map, with map tiles from OpenStreetMap.
+      // L is the Leaflet API object
+      var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">' +
+        'OpenStreetMap</a> contributors';
+      var osm = L.tileLayer(osmUrl, {
+        maxZoom: 18,
+        attribution: osmAttrib,
+        noWrap: true
+      });
+      var map = L.map('map', {
+        layers: [osm],
+        center: new L.LatLng(12.8, -7.8),
+        zoom: 6,
+        maxBounds: [[90,-180], [-90, 180]]
+      });
+
+      // jpcallback is called once the geojsonp file below loads
+      function jpcallback(data){
+        // The following code sets up the timeline and the points that respond
+        // to it. The points don't really change size - we have a separate
+        // point for each day at each location, and as the timeline runs, it
+        // shows the points for one day, then hides them as it shows the next
+        // day.
+        var getInterval = function(datapt) {
+          return {
+            start: new Date(datapt.properties.start).getTime(),
+            end: new Date(datapt.properties.end).getTime()
+          };
+        };
+        var timelineControl = L.timelineSliderControl({
+          formatOutput: function(date) {
+            return new Date(date).toUTCString();
+          }
+        });
+        var timeline = L.timeline(data, {
+          getInterval: getInterval,
+          pointToLayer: function(data, latlng){
+            return L.circleMarker(latlng, {
+              radius: (0.25 * Math.sqrt(data.properties.population)),
+              color: "#000",
+              fillColor: status_colors[data.properties.loctype || 'town'],
+              fillOpacity: 0.9,
+            }).bindPopup(data.properties.name);
+          }
+        });
+        timelineControl.addTo(map);
+        timelineControl.addTimelines(timeline);
+        timeline.addTo(map);
+      }
+    </script>
+    <!-- This loads the data to make the visualisation -->
+    <script src="mali.jsonp"></script>
+  </body>
+</html>
